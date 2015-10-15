@@ -4,7 +4,7 @@ const infixToPostfix = require('../infix-to-postfix');
 test('infixToPostfix', function (t) {
   'use strict';
 
-  t.plan(13);
+  t.plan(14);
 
   t.equal(infixToPostfix(), null);
   t.equal(infixToPostfix([]), null);
@@ -18,5 +18,6 @@ test('infixToPostfix', function (t) {
   t.equal(infixToPostfix('(1 + 2) * (-4)'), '1 2 + -4 *');
   t.equal(infixToPostfix('((3 * 4) / (2 + 5)) * (3 + 4)'), '3 4 * 2 5 + / 3 4 + *');
   t.equal(infixToPostfix('((3*4)/(2+5))*(3+4)'), '3 4 * 2 5 + / 3 4 + *');
+  t.equal(infixToPostfix('((  3*   4)/   ( 2+5  ) )*(  3+4)'), '3 4 * 2 5 + / 3 4 + *');
   t.equal(infixToPostfix('((57.5 - -34.1) * (6 / 3.2)) + 4.3'), '57.5 -34.1 - 6 3.2 / * 4.3 +');
 });
