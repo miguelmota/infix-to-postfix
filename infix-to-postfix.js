@@ -27,28 +27,28 @@
         if (operators.indexOf(token) > -1) {
           while (stack.length && operators.indexOf(stack[stack.length-1]) > -1) {
             var operator = stack.pop();
-            result += ' ' + operator;
+            result += (' ' + operator);
           }
 
           stack.push(token);
-        } else if (token === '(' ){
+        } else if (token === '(') {
           stack.push(token);
-        } else if (token === ')' ){
+        } else if (token === ')') {
           var item = stack.pop();
 
           while (item !== '(') {
-            result += ' ' + item;
+            result += (' ' + item);
             item = stack.pop();
           }
         } else if (!isNaN(token)) {
-          result += ' ' + token;
+          result += (' ' + token);
         }
       }
     }
 
     while (stack.length) {
       var item = stack.pop();
-      result += ' ' + item;
+      result += (' ' + item);
     }
 
     return result.trim();
