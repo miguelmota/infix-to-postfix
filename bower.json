@@ -1,0 +1,28 @@
+{
+  "name": "infix-to-postfix",
+  "main": "infix-to-postfix.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/miguelmota/infix-to-postfix",
+  "authors": [
+    "Miguel Mota <miguelmota2@gmail.com>"
+  ],
+  "description": "Returns a postfix (Reverse Polish Notation) expression from an infix expression.",
+  "keywords": [
+    "postfix",
+    "reverse polish notation",
+    "rpn",
+    "infix",
+    "notation",
+    "arithmetic",
+    "expression",
+    "parse"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "MIT"
+}
