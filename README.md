@@ -23,6 +23,8 @@ console.log(infixToPostfix('((3 * 4) / (2 + 5)) * (3 + 4)')); // '3 4 * 2 5 + / 
 console.log(infixToPostfix('((57.5 - -34.1) * (6 / 3.2)) + 4.3')); // '57.5 -34.1 - 6 3.2 / * 4.3 +'
 ```
 
+For calculating postfix expressions, use the [postfix-calculate](https://github.com/miguelmota/postfix-calculate) module.
+
 # Test
 
 ```bash
