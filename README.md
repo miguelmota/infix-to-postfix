@@ -21,6 +21,7 @@ console.log(infixToPostfix('1 + 2')); // '1 2 +'
 console.log(infixToPostfix('(1 + 2) * (-4)')); // '1 2 + -4 *'
 console.log(infixToPostfix('((3 * 4) / (2 + 5)) * (3 + 4)')); // '3 4 * 2 5 + / 3 4 + *'
 console.log(infixToPostfix('((57.5 - -34.1) * (6 / 3.2)) + 4.3')); // '57.5 -34.1 - 6 3.2 / * 4.3 +'
+console.log(infixToPostfix('a & 5')); // null (invalid expressions return null)
 ```
 
 Use the [postfix-calculate](https://github.com/miguelmota/postfix-calculate) module for calculating postfix expressions.

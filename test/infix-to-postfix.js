@@ -4,13 +4,14 @@ const infixToPostfix = require('../infix-to-postfix');
 test('infixToPostfix', function (t) {
   'use strict';
 
-  t.plan(12);
+  t.plan(13);
 
-  t.equal(infixToPostfix(), '');
-  t.equal(infixToPostfix([]), '');
-  t.equal(infixToPostfix({}), '');
-  t.equal(infixToPostfix(''), '');
-  t.equal(infixToPostfix(NaN), '');
+  t.equal(infixToPostfix(), null);
+  t.equal(infixToPostfix([]), null);
+  t.equal(infixToPostfix({}), null);
+  t.equal(infixToPostfix(''), null);
+  t.equal(infixToPostfix(NaN), null);
+  t.equal(infixToPostfix('a & 5'), null);
   t.equal(infixToPostfix('1 + 2'), '1 2 +');
   t.equal(infixToPostfix(String('1 + 2')), '1 2 +');
   t.equal(infixToPostfix(new String('1 + 2')), '1 2 +');

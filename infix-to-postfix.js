@@ -6,21 +6,21 @@
   'use strict';
 
   function infixToPostfix(expression) {
-    var result = '';
-
     if (typeof expression !== 'string') {
       if (expression instanceof String) {
         expression = expression.toString();
       } else {
-        return result;
+        return null;
       }
     }
 
+    var result = '';
     var stack = [];
     var operators = ['*','/','+','-'];
     var tokens = expression.match(/(-?(?:\d+\.?\d*|-?\.\d*))|[()+\-*/]/gi);
+    var containsInvalidChars = /[^()+\-*/0-9.\s]/gi.test(expression);
 
-    if (Array.isArray(tokens)) {
+    if (Array.isArray(tokens) && !containsInvalidChars) {
       for (var i = 0; i < tokens.length; i++) {
         var token = tokens[i];
 
@@ -40,7 +40,7 @@
             result += (' ' + item);
             item = stack.pop();
           }
-        } else if (!isNaN(token)) {
+        } else if (token) {
           result += (' ' + token);
         }
       }
@@ -51,7 +51,9 @@
       result += (' ' + item);
     }
 
-    return result.trim();
+    result = result.trim();
+
+    return (result.length >= 1 ? result : null);
   }
 
   if (typeof exports !== 'undefined') {
