@@ -1,3 +1,7 @@
+/**
+ * @credit http://www.smccd.net/accounts/hasson/C++2Notes/ArithmeticParsing.html
+ */
+
 (function(root) {
   'use strict';
 
@@ -5,12 +9,16 @@
     var result = '';
 
     if (typeof expression !== 'string') {
-      return result;
+      if (expression instanceof String) {
+        expression = expression.toString();
+      } else {
+        return result;
+      }
     }
 
     var stack = [];
     var operators = ['*','/','+','-'];
-    var tokens = expression.match(/(-?(?:\d+\.?\d*|-?\.\d*))|[()+\-*/]/gi)
+    var tokens = expression.match(/(-?(?:\d+\.?\d*|-?\.\d*))|[()+\-*/]/gi);
 
     if (Array.isArray(tokens)) {
       for (var i = 0; i < tokens.length; i++) {

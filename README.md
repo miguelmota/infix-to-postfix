@@ -15,7 +15,7 @@ bower install infix-to-postfix
 # Usage
 
 ```javascript
-var infixToPostfix = require('infix-to-postfix');
+const infixToPostfix = require('infix-to-postfix');
 
 console.log(infixToPostfix('1 + 2')); // '1 2 +'
 console.log(infixToPostfix('(1 + 2) * (-4)')); // '1 2 + -4 *'

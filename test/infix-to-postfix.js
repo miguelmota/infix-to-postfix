@@ -1,10 +1,10 @@
-var test = require('tape');
-var infixToPostfix = require('../infix-to-postfix');
+const test = require('tape');
+const infixToPostfix = require('../infix-to-postfix');
 
 test('infixToPostfix', function (t) {
   'use strict';
 
-  t.plan(10);
+  t.plan(12);
 
   t.equal(infixToPostfix(), '');
   t.equal(infixToPostfix([]), '');
@@ -12,6 +12,8 @@ test('infixToPostfix', function (t) {
   t.equal(infixToPostfix(''), '');
   t.equal(infixToPostfix(NaN), '');
   t.equal(infixToPostfix('1 + 2'), '1 2 +');
+  t.equal(infixToPostfix(String('1 + 2')), '1 2 +');
+  t.equal(infixToPostfix(new String('1 + 2')), '1 2 +');
   t.equal(infixToPostfix('(1 + 2) * (-4)'), '1 2 + -4 *');
   t.equal(infixToPostfix('((3 * 4) / (2 + 5)) * (3 + 4)'), '3 4 * 2 5 + / 3 4 + *');
   t.equal(infixToPostfix('((3*4)/(2+5))*(3+4)'), '3 4 * 2 5 + / 3 4 + *');
