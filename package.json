@@ -1,6 +1,6 @@
 {
   "name": "infix-to-postfix",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Returns a postfix (Reverse Polish Notation) expression from an infix expression.",
   "main": "infix-to-postfix.js",
   "directories": {

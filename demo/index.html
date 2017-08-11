@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
+  <title>Infix to Postfix</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Verdana,Geneva,sans-serif;
+      font-size: 14px;
+      text-align: left;
+      padding: 20px;
+    }
+    h1 {
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    form div {
+      margin-bottom: 10px;
+    }
+    form input {
+      padding: 5px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 350px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    form button {
+      padding: 5px;
+      font-size: 16px;
+    }
+    #output {
+      padding: 5px;
+      min-width: 300px;
+      min-height: 30px;
+      background: #f5f5f5;
+      white-space: nowrap;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Infix to Postfix</h1>
+
+  <form id="form">
+    <div>
+      <label>Infix</label>
+    <input type="text" id="input" placeholder="1 + 2" />
+    </div>
+
+    <div>
+      <label>Postfix</label>
+      <div id="output"></div>
+    </div>
+
+    <button type="submit">convert</button>
+  </form>
+
+ <a href="https://github.com/miguelmota/infix-to-postfix" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+  <script src="../infix-to-postfix.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
